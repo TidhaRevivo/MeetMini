@@ -93,7 +93,17 @@ def harrypotter1():
 		rating= request.form["rating"]
 		Rating(current_movie, rating)
 		return render_template('harrypotter1.html', u= current_user, m=m , posts= rating_post())
-
+@app.route('/lotr1',  methods=['GET', 'POST'])	
+def lotr1():
+	global current_user
+	current_movie="The lord of the rings: the fellowship of the ring"
+	m= get_movie_by_name(current_movie)
+	if request.method=="GET":
+		return render_template('lotr1.html', u= current_user, m=m , posts= rating_post())
+	else:
+		rating= request.form["rating"]
+		Rating(current_movie, rating)
+		return render_template('lotr1.html', u= current_user, m=m , posts= rating_post())
 
 
 

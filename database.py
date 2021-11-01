@@ -54,5 +54,7 @@ def Rating(movie, rating):
 	elif blob.polarity<= -0.5:
 		movie1.rating-=5
 	session.commit()
-# add_movie("Harry Potter and the philosopher's stone", "'static', 'potter.jpg'","harrypotter1", 80)
 
+	
+# add_movie("Harry Potter and the philosopher's stone", 'static''/potter.jpg',"harrypotter1", 80)
+# add_movie("The lord of the rings: the fellowship of the ring", 'static''/lotr1.jpg',"lotr1", 80)
